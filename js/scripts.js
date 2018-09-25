@@ -15,9 +15,21 @@ function rando() {
   console.log("rando is running " + randyrandom);
   setTimeout(function(){$( ".glitch-box" ).addClass( "glitch2" );setTimeout(function(){$( ".glitch-box" ).removeClass( "glitch2" )}, 200);rando()}, randyrandom)
   console.log("glitch is supposed to be here");
-
-
 }
+function typer(input, classy) {
+  var i = 0;
+  console.log("function is entered");
+  console.log(input);
+  function typing() {
+    console.log("typing is entered");
+    if (i < input.length) {
+      console.log("if statement is entered");
+    setTimeout(function(){$(classy).append(input.charAt(i)); i++; typing()}, randint(20, 200))}
+    console.log("timeout function has run");
+  }
+  typing()
+}
+
 
 $('.glitch').hover(function() {
   $(this).addClass('glitch');
@@ -27,6 +39,7 @@ $('.glitch').hover(function() {
 
 $(document).ready(function(){
 rando()
+typer("The sky above the port was the color of television, tuned to a dead channel...", ".type")
 })
 //
 function randint(min, max) {
