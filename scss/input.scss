@@ -188,6 +188,9 @@ h1 {
     animation: glitch 0.2s infinite;
   }
 }
+.glitch2 {
+  animation: glitch 0.2s 5;
+}
 
 @-webkit-keyframes glitch {
   @for $i from 0 through 100 {
