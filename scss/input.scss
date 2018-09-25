@@ -80,6 +80,21 @@ h1 {
   display: table;
   // background-attachment: fixed;
 }
+.logo {
+  display: flex;
+  justify-content: center;
+  background: none;
+  align-items: center;
+  align-content: center;
+}
+
+.logo2 {
+  display: flex;
+  justify-content: center;
+  background: black !important;
+  align-items: center;
+  padding: 3em;
+}
 
 .slide2 {
   background-image: url('../img/tones.jpg');
