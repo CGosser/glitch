@@ -6,7 +6,12 @@ function play(){
        var audio = document.getElementById("audio");
        audio.play();
                  }
-                 
+
+                 function play2(){
+                        var audio = document.getElementById("audio2");
+                        audio.play();
+                                  }
+
 function parallax() {
   var wScroll= $(window).scrollTop(); //storing how far from top to
 
@@ -44,24 +49,6 @@ typer("HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I BEGAN TO LIV
 function randint(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-
-
-$(function() {
-    var scroll1 = $("#typein");
-    var glitchboxTop = scroll1.offset().top;
-    var windowHeight = $(window).height();
-
-    $(window).scroll(function() {
-
-        var scroll = $(window).scrollTop();
-
-        if ( scroll >= ( glitchboxTop - windowHeight )) {
-if ($("#typein").contents().length == 0){
-            typer("The sky above the port was the color of television, tuned to a dead channel...", "#typein");
-}
-        }
-    });
-});
 
 $(function() {
 
