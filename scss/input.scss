@@ -132,13 +132,21 @@ h1 {
   }
 }
 
+.center {
+
+  .h2 {
+    position: relative;
+    margin: 20% 40%;
+    width: 30%;
+  }
+}
+
 .slide1 {
-  background-image: url('https://i1.creativecow.net/u/262954/capturemir.png');
+  background-image: url('https://user-images.githubusercontent.com/24794294/37569578-b9bcb63e-2ae4-11e8-84e3-eaaeeaab6ba0.png');
   height: 100vh;
   width: 100%;
   background-size: cover;
   display: table;
-
 }
 .logo {
   display: flex;
