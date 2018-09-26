@@ -57,12 +57,10 @@ $colors: $red $blue $yellow $green;
   }
 }
 
-
 .scanlines {
-  @include textGlitch(name, 20, white, black, red, black, 300, 200);
+  @include textGlitch(name, 20, white, black, red, #f808c6, 300, 200);
   font-size: 4em;
 }
-
 
 /// end scalnines
 
@@ -119,8 +117,19 @@ h1 {
 .flex-container {
   display: flex;
   flex-direction: column;
-  // width: 2200px;
   overflow: hidden;
+}
+//ellison stuff
+
+.iam {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: white;
+  width: 40%;
+  p {
+    padding: 0 15px;
+  }
 }
 
 .slide1 {
@@ -156,6 +165,11 @@ h1 {
   display: table;
   background-attachment: fixed;
 }
+
+#new {
+  background: none;
+}
+
 .black-box {
   display: flex;
   justify-content: center;
@@ -263,5 +277,18 @@ h1 {
     #{$percent} {
       @include glitch;
     }
+  }
+}
+
+//MEDIA QUERIES
+
+@media screen and (max-width: 1350px) {
+
+  .iam {
+    width: 15%;
+  }
+  .logo {
+  border: 1px solid red;
+  margin: -550px auto;
   }
 }
