@@ -50,10 +50,10 @@ $(function() {
 
         var scroll = $(window).scrollTop();
 
-        if ( scroll >= ( glitchboxTop - windowHeight && $("typein").is(':empty') == true)) {
-
+        if ( scroll >= ( glitchboxTop - windowHeight )) {
+if ($("#typein").contents().length == 0){
             typer("The sky above the port was the color of television, tuned to a dead channel...", "#typein");
-
+}
         }
     });
 });
