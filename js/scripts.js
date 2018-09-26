@@ -2,6 +2,11 @@ $(window).scroll(function() {
   parallax();
 })
 
+function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+                 }
+                 
 function parallax() {
   var wScroll= $(window).scrollTop(); //storing how far from top to
 
