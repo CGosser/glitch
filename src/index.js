@@ -8,50 +8,19 @@ $(window).scroll(function() {
 
 $("#frequencies").click(function(){
   if (document.getElementById("audio").paused) {
-    console.log("currentlypaused");
   document.getElementById("audio").play()
 } else {
-  console.log("currentlyplaying");
   document.getElementById("audio").pause()
 }
 })
-$(".h2").click(function(){
+$("#future").click(function(){
   if (document.getElementById("audio2").paused) {
-    console.log("currentlypaused");
   document.getElementById("audio2").play()
 } else {
-  console.log("currentlyplaying");
   document.getElementById("audio2").pause()
 }
 })
 
-
-//
-
-// $('#frequencies').toggle(
-// function () {
-// document.getElementById('audio').play();
-// },
-// function () {
-// document.getElementById('audio').pause();
-// }
-// );
-
-
-// var audioElement= document.getElementById("audio");
-// function togglePlay() {
-//     if (audioElement.paused) {
-//         audioElement.play();
-//     }
-//     else {
-//         audioElement.pause();
-//     }
-//
-//     togglePlay();
-// };
-
-
-//
 
 function parallax() {
   var wScroll= $(window).scrollTop(); //storing how far from top to
@@ -62,8 +31,15 @@ function parallax() {
 }
 
 function rando() {
-  var randyrandom = randint(0, 10000)
-  setTimeout(function(){$( ".glitch-box" ).addClass( "glitch2" );setTimeout(function(){$( ".glitch-box" ).removeClass( "glitch2" )}, 200);rando()}, randyrandom)
+  var randyrandom = randint(0, 100000)
+  setTimeout(function(){
+    $( ".glitch-box" ).removeClass( "vhs-flicker" );
+    $( ".glitch-box" ).addClass( "glitch2" );
+    setTimeout(function(){
+      $( ".glitch-box" ).removeClass( "glitch2" )
+    }, 200);
+    rando()
+  }, randyrandom)
 }
 function typer(input, classy) {
   var i = 0;
@@ -92,9 +68,21 @@ function randint(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-$(function() {
 
-    var glitchbox = $(".h2");
+ //
+
+//  var glitchbox2 = $("#frequencies");
+//  var glitchbox2Top = glitchbox2.offset().top;
+//
+// else if {
+//   ( scroll >= glitchbox2Top - windowHeight )) {
+//     $("#frequencies").addClass("vhs-flicker");
+//   }
+// }
+//
+
+$(function() {
+    var glitchbox = $("#future");
     var glitchboxTop = glitchbox.offset().top;
     var windowHeight = $(window).height();
 
@@ -104,8 +92,38 @@ $(function() {
 
         if ( scroll >= ( glitchboxTop - windowHeight )) {
 
-            $(".h2").addClass("vhs-flicker");
+            $("#future").addClass("vhs-flicker");
+        }
+    });
+});
 
+$(function() {
+    var glitchbox = $("#frequencies");
+    var glitchboxTop = glitchbox.offset().top;
+    var windowHeight = $(window).height();
+
+    $(window).scroll(function() {
+
+        var scroll = $(window).scrollTop();
+
+        if ( scroll >= ( glitchboxTop - windowHeight )) {
+
+            $("#frequencies").addClass("vhs-flicker");
+        }
+    });
+});
+
+$(function() {
+    var communityVar = $("#community");
+    var communityVarTop = communityVar.offset().top;
+    var windowHeight = $(window).height();
+
+    $(window).scroll(function() {
+
+        var scroll = $(window).scrollTop();
+
+        if ( scroll >= ( communityVarTop - windowHeight )) {
+            $("#community").addClass("vhs-flicker")
         }
     });
 });

@@ -64,7 +64,6 @@ $colors: $red $blue $yellow $green;
 }
 
 /// end scalnines
-
 body {
   padding: 0px;
   margin: 0px;
@@ -214,7 +213,7 @@ h1 {
 }
 
 .slide4 {
-  background-image: url('../assets/img/tones2.jpg');
+  background-image: url('../assets/img/screen.jpg');
   flex-direction: column;
   justify-content: center;
   height: 100vh;
@@ -222,6 +221,10 @@ h1 {
   background-size: cover;
   display: table;
   background-attachment: fixed;
+  p {
+    width: 10%;
+    margin: 0 auto;
+  }
 }
 .slide5 {
   background-image: url('https://www.residentadvisor.net/images/events/flyer/2018/7/uk-0728-1132000-1161738-front.jpg');
