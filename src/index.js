@@ -1,3 +1,5 @@
+import './sass/styles.scss';
+
 $(window).scroll(function() {
   parallax();
 })
