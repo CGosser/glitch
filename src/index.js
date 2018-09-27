@@ -1,25 +1,23 @@
 import './sass/styles.scss';
-import audio from './assets/img/CherryMoon.mp3';
+import './assets/music/CherryMoon.mp3';
+import './assets/music/01167227.mp3';
 
 $(window).scroll(function() {
   parallax();
 })
 
-function startMusic(){
-       var audio = document.getElementById("audio");
-       audio.play();
-                 }
-
-                 function play2(){
-                        var audio = document.getElementById("audio2");
-                        audio.play();
-                                  }
+$("#frequencies").click(function(){
+  document.getElementById("audio").play();
+})
+$(".h2").click(function(){
+document.getElementById("audio2").play();
+})
 
 function parallax() {
   var wScroll= $(window).scrollTop(); //storing how far from top to
 
   $('.slide1').css('background-position', 'center ' + (wScroll*0.75) + 'px')
-  $('#logo').css('transform', )
+  $('#logo').css('transform')
 
 }
 
