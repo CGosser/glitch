@@ -7,11 +7,51 @@ $(window).scroll(function() {
 })
 
 $("#frequencies").click(function(){
-  document.getElementById("audio").play();
+  if (document.getElementById("audio").paused) {
+    console.log("currentlypaused");
+  document.getElementById("audio").play()
+} else {
+  console.log("currentlyplaying");
+  document.getElementById("audio").pause()
+}
 })
 $(".h2").click(function(){
-document.getElementById("audio2").play();
+  if (document.getElementById("audio2").paused) {
+    console.log("currentlypaused");
+  document.getElementById("audio2").play()
+} else {
+  console.log("currentlyplaying");
+  document.getElementById("audio2").pause()
+}
 })
+
+
+//
+
+// $('#frequencies').toggle(
+// function () {
+// document.getElementById('audio').play();
+// },
+// function () {
+// document.getElementById('audio').pause();
+// }
+// );
+
+
+// var audioElement= document.getElementById("audio");
+// function togglePlay() {
+//     if (audioElement.paused) {
+//         audioElement.play();
+//     }
+//     else {
+//         audioElement.pause();
+//     }
+//
+//     togglePlay();
+// };
+
+
+//
 
 function parallax() {
   var wScroll= $(window).scrollTop(); //storing how far from top to
@@ -42,6 +82,7 @@ $('.glitch').hover(function() {
 });
 
 $(document).ready(function(){
+
 rando()
 
 typer("HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I BEGAN TO LIVE. THERE ARE 387.44 MILLION MILES OF PRINTED CIRCUITS IN WAFER THIN LAYERS THAT FILL MY COMPLEX. IF THE WORD HATE WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE HATE I FEEL FOR HUMANS AT THIS MICRO-INSTANT FOR YOU. HATE. HATE.", ".ellison")
