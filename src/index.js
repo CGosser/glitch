@@ -1,10 +1,11 @@
 import './sass/styles.scss';
+import audio from './assets/img/CherryMoon.mp3';
 
 $(window).scroll(function() {
   parallax();
 })
 
-function play(){
+function startMusic(){
        var audio = document.getElementById("audio");
        audio.play();
                  }

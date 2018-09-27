@@ -38,11 +38,17 @@ module.exports = {
           }
         ]
       },
-      
       {
-    test: /\.mp3$/,
-    include: SRC,
-    loader: 'file-loader'
+        test: /\.(mp3)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/music/'
+            }
+          }
+        ]
       },
 
       {
