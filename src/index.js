@@ -26,12 +26,13 @@ function parallax() {
   var wScroll= $(window).scrollTop(); //storing how far from top to
 
   $('.slide1').css('background-position', 'center ' + (wScroll*0.75) + 'px')
-  $('#logo').css('transform')
-
+  // $('#logo').css('transform')
+  $('.slide2').css('background-position', 'center ' + (wScroll*-0.05) + 'px')
+  $('.slide4').css('background-position', 'center ' + (wScroll*-0.05) + 'px')
 }
 
 function rando() {
-  var randyrandom = randint(0, 100000)
+  var randyrandom = randint(0, 10000)
   setTimeout(function(){
     $( ".glitch-box" ).removeClass( "vhs-flicker" );
     $( ".glitch-box" ).addClass( "glitch2" );
